@@ -1,0 +1,17 @@
+{
+  "name": "payfazz-test-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": null,
+  "scripts": {
+    "dev" : "next -p 6000",
+    "build" : "next build",
+    "start" : "next start -p 6000"
+  },
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
