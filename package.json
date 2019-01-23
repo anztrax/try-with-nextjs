@@ -5,9 +5,9 @@
   "license": "MIT",
   "private": null,
   "scripts": {
-    "dev": "next -p 6110",
+    "dev": "next -p 6000",
     "build": "next build",
-    "start": "next start -p 6110"
+    "start": "next start -p 6000"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
