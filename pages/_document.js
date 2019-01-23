@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
     return (
       <html>
       <Head>
-        <title>With Emotion</title>
+        <title>Linkedin </title>
         <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
       </Head>
       <body>

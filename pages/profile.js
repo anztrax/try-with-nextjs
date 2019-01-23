@@ -9,7 +9,7 @@ class ProfilePage extends React.Component{
     return (
       <MainLayout>
         <HeaderBar profileId={profileId} />
-        <ProfilePageBodyContainer />
+        <ProfilePageBodyContainer profileId={profileId} />
       </MainLayout>
     )
   }
