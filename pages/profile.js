@@ -1,10 +1,12 @@
 import React from 'react';
+import MainLayout from "../layouts/MainLayout";
 
 class ProfilePage extends React.Component{
   render(){
     return (
-      <div>
-      </div>
+      <MainLayout>
+        <h1>Profile Page</h1>
+      </MainLayout>
     )
   }
 }
