@@ -1,6 +1,7 @@
 import influencers from './influencers';
 import recentPersons from './recentPersons';
 import posts from './posts';
+import feedRecommendations from './feedRecommendations';
 
 const userProfiles = {
   'id001' : {
@@ -12,6 +13,7 @@ const userProfiles = {
     followers : 1151,
     recentPersons,
     posts,
+    feedRecommendations,
   },
   'id002' : {
     fullName : 'Hantze Sudarma',
@@ -132,6 +134,7 @@ const userProfiles = {
     ],
     recentPersons,
     posts,
+    feedRecommendations
   },
   'id003' : {
     fullName : 'Wirjadi Lorens',
@@ -142,6 +145,7 @@ const userProfiles = {
     followers : 1151,
     recentPersons,
     posts,
+    feedRecommendations
   },
 };
 

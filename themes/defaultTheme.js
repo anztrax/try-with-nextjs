@@ -12,6 +12,7 @@ const gray3 = '#787878';
 const lightGray1 = '#f5f5f5';
 const blackBlue1 = '#2a3250';
 const black1 = '#191919';
+const red1 = '#fe2a34';
 
 const colors = {
   primaryBlue,
@@ -27,7 +28,8 @@ const colors = {
   gray3,
   lightGray1,
   blackBlue1,
-  black1
+  black1,
+  red1
 };
 
 const primaryFontSize = '25px';

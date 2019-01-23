@@ -23,7 +23,24 @@ const classNames = {
     background-color: #e9ecef;
     border: 1px solid #ced4da;
     border-top-right-radius : .25rem;;
-    border-bottom-right-radius : .25rem;;
+    border-bottom-right-radius : .25rem;
+  `,
+  searchButtonPrepend: css`
+     display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: ${colors.white};
+    border: 1px solid #ced4da;
+    border-top-left-radius : .25rem;;
+    border-bottom-left-radius : .25rem;
   `,
   searchInputContainer: css`
     display: inline-block;
@@ -59,12 +76,23 @@ class SearchInput extends React.Component{
     const { isOpen, recentPersons } = this.state;
     return(
       <div className={classNames.searchInputContainer} ref={node => this.node = node}>
-        <InputGroup>
-          <Input placeholder="search" />
-          <InputGroupAddon addonType="append" className={classNames.searchButton}>
-            <FiSearch color={colors.blue1} size={20} />
-          </InputGroupAddon>
-        </InputGroup>
+        {isOpen ?
+          (
+            <InputGroup>
+              <Input placeholder="search" />
+              <InputGroupAddon addonType="append" className={classNames.searchButton}>
+                <FiSearch color={colors.blue1} size={20} />
+              </InputGroupAddon>
+            </InputGroup>
+          ) :
+          (
+            <InputGroup>
+              <InputGroupAddon addonType="prepend" className={classNames.searchButtonPrepend}>
+                <FiSearch color={colors.blue1} size={20} />
+              </InputGroupAddon>
+              <Input placeholder="search" />
+            </InputGroup>
+          )}
         {isOpen && (
           <SearchResult recentPersons={recentPersons} />
         )}

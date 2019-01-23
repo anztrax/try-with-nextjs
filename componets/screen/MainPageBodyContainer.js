@@ -5,8 +5,8 @@ import SimpleProfile from "../Profile/SimpleProfile";
 import DummyDataService from "../../services/DummyDataService";
 import Posts from '../post/Posts';
 import PostInput from '../post/PostInput';
-import VerticalDivider from "../divider/VerticalDivider";
-import posts from "../../services/dummyData/posts";
+import FeedRecommendationContainer from '../FeedRecommendation/FeedRecommendationContainer';
+import feedRecommendations from "../../services/dummyData/feedRecommendations";
 
 class MainPageBodyContainer extends React.Component{
   constructor(props){
@@ -35,12 +35,14 @@ class MainPageBodyContainer extends React.Component{
           <div className="col">
             <SimpleProfile profileData={profileData} />
           </div>
-          <div className="col-7">
+          <div className="col-6">
             <PostInput />
             <Posts posts={(profileData) ? profileData.posts : []} />
           </div>
-          <div className="col" style={{backgroundColor: 'blue'}}>
-            3 of 3
+          <div className="col">
+            <FeedRecommendationContainer
+              feedRecommendations={(profileData) ? profileData.feedRecommendations : []}
+            />
           </div>
         </div>
       </Container>

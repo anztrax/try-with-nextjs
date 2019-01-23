@@ -56,7 +56,7 @@ class HeaderBar extends React.Component{
     const { profileId } = this.props;
     return (
       <div>
-        <Navbar color="light" light expand="md" sticky={true} className={classNames.mainNavBar} fixed={true}>
+        <Navbar color="light" expand="md" className={classNames.mainNavBar} fixed={true}>
           <Container>
             <NavbarBrand href="/">
               <LinkedInLogo />
@@ -76,6 +76,7 @@ class HeaderBar extends React.Component{
                 <HeaderBarMenuItem
                   IconComponent={FiUsers}
                   menuName={'My Network'}
+                  notifCount={1}
                 />
               </NavItem>
               <NavItem>
@@ -94,6 +95,7 @@ class HeaderBar extends React.Component{
                 <HeaderBarMenuItem
                   IconComponent={FiBell}
                   menuName={'Notifications'}
+                  notifCount={4}
                 />
               </NavItem>
               <NavItem>

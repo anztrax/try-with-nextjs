@@ -7,6 +7,7 @@ import ArrowDown from "../Icons/ArrowDown";
 const menuItemWidth = '75px';
 const classNames = {
   menuItemContainer: css`
+    position: relative;
     width : ${menuItemWidth};
     margin: 10px 10px 4px 10px;
     text-align: center;
@@ -25,6 +26,16 @@ const classNames = {
     width: ${menuItemWidth};
     position: absolute;
     background-color: ${colors.white}
+  `,
+  notifCircle: css`
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: ${colors.red1};
+    position: absolute;
+    top: 0px;
+    right: 20px;
   `
 };
 
@@ -38,7 +49,7 @@ const styles = {
 
 class HeaderBarMenuItem extends React.Component{
   render(){
-    const { menuName, isActive, IconComponent, ImageComponent, isShowArrowComponent } = this.props;
+    const { menuName, isActive, IconComponent, ImageComponent, isShowArrowComponent, notifCount } = this.props;
     const primaryColor = (isActive) ? colors.white : colors.whiteBlue1;
 
     return (
@@ -46,6 +57,14 @@ class HeaderBarMenuItem extends React.Component{
         {IconComponent ?
           <IconComponent size={fonts.primaryFontSize} color={primaryColor}  /> :
           ImageComponent
+        }
+        {notifCount ?
+          (
+            <div className={classNames.notifCircle}>
+              {notifCount}
+            </div>
+          ) :
+          null
         }
         <div className={[classNames.menuItemName]} style={{color: primaryColor}}>
           {menuName}
@@ -63,7 +82,8 @@ HeaderBarMenuItem.propTypes = {
   IconComponent: PropTypes.element,
   menuName : PropTypes.string,
   isActive: PropTypes.bool,
-  isShowArrowComponent: PropTypes.bool
+  isShowArrowComponent: PropTypes.bool,
+  notifCount: PropTypes.number
 };
 HeaderBarMenuItem.defaultProps = {
   isActive : false,
