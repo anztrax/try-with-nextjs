@@ -16,7 +16,8 @@ const classNames = {
     width: 700px;
     color: ${colors.lightBlack1}
     border: 1px solid #ced4da;
-    
+    margin-top: 6px;
+    z-index: 3;
   `,
   section: css`
     padding: 10px 15px;

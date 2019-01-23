@@ -22,6 +22,7 @@ import HeaderBarMenuItem from "./HeaderBarMenuItem";
 import CircleImage from '../Images/CircleImage';
 import SearchInput from "../form/SearchInput/SearchInput";
 import HorizontalDivider from "../divider/HorizontalDivider";
+import Container from "../container/Container";
 
 const classNames = {
   mainNavBar: css`
@@ -56,10 +57,10 @@ class HeaderBar extends React.Component{
     return (
       <div>
         <Navbar color="light" light expand="md" sticky={true} className={classNames.mainNavBar} fixed={true}>
-          <div className={"container"} style={{maxWidth: 'calc(100vw - 80px);'}}>
-          <NavbarBrand href="/">
-            <LinkedInLogo />
-          </NavbarBrand>
+          <Container>
+            <NavbarBrand href="/">
+              <LinkedInLogo />
+            </NavbarBrand>
             <div className={classNames.searchInputContainer}>
               <SearchInput profileId={profileId} />
             </div>
@@ -123,7 +124,7 @@ class HeaderBar extends React.Component{
                 </span>
               </NavItem>
             </Nav>
-          </div>
+          </Container>
         </Navbar>
       </div>
     )

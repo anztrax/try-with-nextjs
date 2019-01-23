@@ -1,20 +1,25 @@
 import influencers from './influencers';
 import recentPersons from './recentPersons';
+import posts from './posts';
 
 const userProfiles = {
   'id001' : {
     fullName : 'Christian Hanggra',
     title : 'Tech Enthusiast',
+    placeImageUrl : '/static/images/christian-hanggarra-image.jpeg',
     viewedProfile : 80,
     connections : 1133,
-    recentPersons
+    followers : 1151,
+    recentPersons,
+    posts,
   },
   'id002' : {
     fullName : 'Hantze Sudarma',
     title : 'Laboratory Coordinator',
+    viewedProfile: 80,
     connections : 510,
     followers : 1151,
-    placeImageUrl : '/static/images/binus-logo.png',
+    placeImageUrl : '/static/images/hantze-image.jpeg',
     experiences : [
       {
         title : 'Lab Coordinator',
@@ -125,7 +130,18 @@ const userProfiles = {
       influencers['id005'],
       influencers['id006']
     ],
-    recentPersons
+    recentPersons,
+    posts,
+  },
+  'id003' : {
+    fullName : 'Wirjadi Lorens',
+    title : 'Founder of OKTAGON',
+    placeImageUrl : '/static/images/wirjadi-lorens.jpeg',
+    viewedProfile : 80,
+    connections : 1133,
+    followers : 1151,
+    recentPersons,
+    posts,
   },
 };
 

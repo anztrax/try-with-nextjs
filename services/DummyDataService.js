@@ -9,7 +9,7 @@ class DummyDataService {
       setTimeout(() => {
         const profileData = userProfiles[profileId];
         resolve(profileData);
-      }, 1000);
+      }, 10);
     });
   };
 
@@ -18,7 +18,7 @@ class DummyDataService {
       setTimeout(() => {
         const { recentPersons } = userProfiles[profileId];
         resolve(recentPersons);
-      }, 1000);
+      }, 10);
     });
   };
 }
